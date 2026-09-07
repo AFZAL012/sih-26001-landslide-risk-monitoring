@@ -1,40 +1,55 @@
-# SIH 26001 — Landslide Risk Monitoring Dashboard
+# Landslide Risk Monitoring Dashboard — Frontend
 
-A frontend-first React + TypeScript dashboard closely matching the supplied reference dashboard. It is intentionally powered by mock data so frontend work can proceed before the FastAPI/PostgreSQL/ML backend is ready.
+A React + TypeScript dashboard for monitoring landslide risk across the North Eastern Region of India.
 
-## Run
+The frontend provides an interactive map, live risk indicators, environmental parameters, infrastructure impact information, evacuation status, emergency support units, and risk summaries.
 
-```bash
-npm install
-npm run dev
-```
+## Features
 
-## What is included
+- Interactive landslide-risk map using Leaflet
+- Location-based risk markers
+- Risk levels:
+  - LOW
+  - MEDIUM
+  - HIGH
+  - CRITICAL
+  - UNKNOWN
+- Live risk data from the FastAPI backend
+- Environmental indicators:
+  - Rainfall
+  - Soil moisture
+  - Slope
+  - Elevation
+  - Snow cover
+- Risk score and model confidence
+- Risk-factor information for monitored locations
+- Infrastructure damage summary
+- Evacuation and shelter-capacity information
+- Emergency support-unit availability
+- Automatic dashboard data refresh
+- Responsive dashboard interface
+- Charts and visualizations using Recharts
 
-- Dark operations dashboard matching the reference layout
-- Left legend, estimated affected summary and field-report links
-- Central interactive Leaflet map with terrain/street layer toggle
-- Risk zones and clickable location markers
-- Verified risk events chart + severity cards
-- Infrastructure impact chart
-- Evacuation gauge
-- Available support units
-- Selected-location risk details
-- Mock risk data structured for later API integration
+## Tech Stack
 
-## Backend integration
+- React
+- TypeScript
+- Vite
+- React Leaflet
+- Leaflet
+- Recharts
+- CSS
 
-Replace the mock `locations` data in `src/App.tsx` with calls to your FastAPI service. Keep the same fields:
+## Project Structure
 
-```json
-{
-  "location_id": 101,
-  "risk_score": 87,
-  "risk_level": "HIGH",
-  "confidence": 0.91,
-  "latitude": 27.33,
-  "longitude": 88.61
-}
-```
-
-The UI does not need to be redesigned when the backend becomes available.
+```text
+frontend/
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── styles.css
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+└── vite.config.ts
