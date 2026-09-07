@@ -53,3 +53,30 @@ frontend/
 ├── package-lock.json
 ├── tsconfig.json
 └── vite.config.ts
+
+Google Earth Engine
+        │
+        ▼
+FastAPI Backend
+        │
+        ├── Rainfall
+        ├── Soil Moisture
+        ├── Elevation
+        ├── Slope
+        └── Snow Cover
+        │
+        ▼
+ML Risk Prediction
+        │
+        ▼
+/api/risk/live
+        │
+        ▼
+React Dashboard
+        │
+        ├── Risk Map
+        ├── Risk Indicators
+        ├── Environmental Data
+        ├── Infrastructure
+        ├── Evacuation
+        └── Emergency Support
